@@ -1,1 +1,0 @@
-This is a repository to store Jiahao's LeetCode scripts.
