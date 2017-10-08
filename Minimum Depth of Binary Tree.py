@@ -7,25 +7,33 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def minDepth(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
+        # if not root:
+        #     return 0
+        #
+        # deep = 1
+        #
+        # if root.left and root.right:
+        #     deep = deep + min(self.minDepth(root.left), self.minDepth(root.right))
+        # elif root.left:
+        #     deep = deep + self.minDepth(root.left)
+        # elif root.right:
+        #     deep = deep + self.minDepth(root.right)
+        #
+        # return deep
+
         if not root:
             return 0
 
-        deep = 1
+        d = map(self.minDepth, (root.left, root.right))
 
-        if root.left and root.right:
-            deep = deep + min(self.minDepth(root.left), self.minDepth(root.right))
-        elif root.left:
-            deep = deep + self.minDepth(root.left)
-        elif root.right:
-            deep = deep + self.minDepth(root.right)
-
-        return deep
+        return 1 + (min(d) or max(d))
 
 
 
