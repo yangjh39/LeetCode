@@ -21,6 +21,7 @@ class Solution(object):
         # else:
         #     return 0
 
+        #Greedy Algorithm!!!
         max_profit, min_price = 0, float('inf')
 
         for price in prices:
@@ -29,6 +30,25 @@ class Solution(object):
             max_profit = max(max_profit, profit)
 
         return max_profit
+
+    #multi - transactions
+    # def maxProfit(self, prices):
+    #     """
+    #     :type prices: List[int]
+    #     :rtype: int
+    #     """
+    #
+    #     max_profit, min_price = 0, float('inf')
+    #
+    #     for price in prices:
+    #         min_price = min(min_price, price)
+    #         profit = price - min_price
+    #
+    #         if profit > 0:
+    #             max_profit += profit
+    #             min_price = price
+    #
+    #     return max_profit
 
 temp = Solution()
 temp.maxProfit([7,1,2,3])
