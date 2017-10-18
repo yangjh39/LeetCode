@@ -51,4 +51,4 @@ class Solution(object):
     #     return max_profit
 
 temp = Solution()
-temp.maxProfit([7,1,2,3])
+temp.maxProfit([7, 1, 2, 3])
