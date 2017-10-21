@@ -27,8 +27,7 @@ class Solution(object):
             l = (l-1) // 26
 
         self.stack.reverse()
-        # return reduce(lambda x, y: str(x)+str(y), [chr(x + 65) for x in self.stack[::-1]])
-        return ''.join(self.stack)
+        return reduce(lambda x, y: str(x)+str(y), [chr(x + 65) for x in self.stack[::-1]])
 
 temp = Solution()
 temp.convertToTitle(26)
