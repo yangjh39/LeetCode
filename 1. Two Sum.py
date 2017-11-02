@@ -1,6 +1,6 @@
 #2017/9/22
 
-import  numpy as np
+import numpy as np
 class Solution(object):
     def twoSum(self, nums, target):
         """
